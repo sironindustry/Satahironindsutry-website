@@ -5,6 +5,7 @@ import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
   {
@@ -36,6 +37,7 @@ const contactInfo = [
 const Contact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -45,8 +47,14 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    if (!formData.name && !formData.phone) {
+      toast({ title: "Please enter your name or phone number", variant: "destructive" });
+      return;
+    }
+    const text = `*Inquiry from Website*%0A👤 ${formData.name || "Customer"}%0A📞 ${formData.phone || "N/A"}%0A📧 ${formData.email || "N/A"}%0A💬 ${formData.message || "I am interested in your shutter materials."}`;
+    window.open(`https://wa.me/917772886416?text=${text}`, "_blank");
+    toast({ title: "Inquiry Sent!", description: "Opening WhatsApp to connect with SATAH Iron Industry..." });
+    setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
   return (

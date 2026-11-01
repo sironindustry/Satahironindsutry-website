@@ -8,6 +8,7 @@ import { Separator } from "@/components/ui/separator";
 import { useToast } from "@/hooks/use-toast";
 import { Lock, LogOut, Package, Settings, Plus, Trash2, Save, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 import {
   Select,
   SelectContent,
@@ -257,6 +258,7 @@ const Admin = () => {
   if (!isAuthenticated) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center p-4">
+        <SEO title="Admin Login" description="Admin portal login" noindex={true} />
         <Card className="w-full max-w-md">
           <CardHeader className="text-center">
             <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-accent to-spark flex items-center justify-center">
@@ -287,6 +289,7 @@ const Admin = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Admin Dashboard" description="Admin portal dashboard" noindex={true} />
       {/* Header */}
       <div className="bg-primary text-primary-foreground p-4 shadow-lg">
         <div className="container mx-auto flex flex-wrap items-center justify-between gap-3">

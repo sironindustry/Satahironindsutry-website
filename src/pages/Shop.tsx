@@ -18,6 +18,7 @@ import { useCart, CartItem } from "@/hooks/useCart";
 import { useProducts, useSiteSettings } from "@/hooks/useProducts";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Skeleton } from "@/components/ui/skeleton";
 
 interface ProductState {
@@ -122,6 +123,34 @@ const Shop = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SEO
+        title="Buy Rolling Shutter Parts, Strips, Springs, Guides & Hardware"
+        description="At SATAH Iron Industry, we specialize in selling a wide range of shutter materials. Shop shutter strips (patti), guides, shutter bottoms, springs, locks, gear boxes, iron pipes, and brackets online at live market rates."
+        keywords="buy shutter materials, shutter strips online, rolling shutter patti, shutter springs, shutter bottom channel, shutter gear boxes, shutter locks, iron pipes, SATAH Iron Industry"
+        canonical="/shop"
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Shop Rolling Shutter Parts & Materials",
+            "url": "https://sironindustry.com/shop",
+            "description": "At SATAH Iron Industry, we specialize in selling a wide range of shutter materials: shutter strips, guides, bottoms, springs, locks, gear boxes, iron pipes, and brackets.",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "SATAH Iron Industry",
+              "url": "https://sironindustry.com"
+            }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sironindustry.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Shop", "item": "https://sironindustry.com/shop" }
+            ]
+          }
+        ]}
+      />
       <Navbar />
 
       <main className="pt-20 lg:pt-24 pb-10 lg:pb-16 flex-1">

@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/select";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { useSiteSettings } from "@/hooks/useProducts";
 import { Label } from "@/components/ui/label";
 import { createWeightReport, downloadWeightReport } from "@/lib/weightReport";
@@ -128,6 +129,36 @@ const WeightCalculation = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Weighbridge Kanta Scale Weight Calculator & PDF Report"
+        description="Calculate exact item net weights from cumulative scale (kanta) readings for shutter materials and industrial iron. Generate and download branded PDF weight reports instantly with SATAH Iron Industry."
+        keywords="kanta weight calculation, weighbridge calculator, scale reading delta, iron weight calculation, rolling shutter weight report, SATAH Iron Industry"
+        canonical="/weight-calculation"
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Weighbridge Kanta Scale Weight Calculator",
+            "url": "https://sironindustry.com/weight-calculation",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "All",
+            "description": "Calculate item weights from cumulative weighbridge scale readings and download PDF reports.",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "SATAH Iron Industry",
+              "url": "https://sironindustry.com"
+            }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sironindustry.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Weight Calculation", "item": "https://sironindustry.com/weight-calculation" }
+            ]
+          }
+        ]}
+      />
       <Navbar />
       <main className="pt-24 lg:pt-28 pb-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">

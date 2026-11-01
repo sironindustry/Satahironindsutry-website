@@ -38,17 +38,11 @@ const About = () => {
             </h2>
             
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              SATAH IRON INDUSTRY specializes in manufacturing strong, reliable, and 
-              precisely engineered iron products. We provide top-quality rolling shutters, 
-              gates, and custom fabrication solutions designed for durability and long-term 
-              performance.
+              At SATAH Iron Industry, we specialize in selling a wide range of shutter materials. From shutter strips and shutters to guides, shutter bottoms, springs, locks, gear boxes, iron pipes, and brackets, we've got everything you need for your shutter projects.
             </p>
             
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              With a focus on innovation and customer satisfaction, we work hard to deliver 
-              products that meet the highest standards of safety, strength, and craftsmanship. 
-              Our commitment to excellence has made us the trusted choice for builders and 
-              fabricators across the region.
+              Count on us for high-quality materials that are built to last. Built for durability, engineered for performance, and designed for your business—contact SATAH Iron Industry today for all your shutter material needs!
             </p>
 
             {/* Stats Grid */}

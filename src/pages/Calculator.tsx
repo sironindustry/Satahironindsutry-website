@@ -15,6 +15,7 @@ import { useToast } from "@/hooks/use-toast";
  import { useCart } from "@/hooks/useCart";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 // Configuration options - Updated with exact weights per foot
 const pattiOptions = ["0.6mm", "0.7mm", "0.8mm", "0.9mm", "1.0mm"];
@@ -749,6 +750,36 @@ const Calculator = () => {
 
   return (
     <div className="calculator-page min-h-screen bg-background">
+      <SEO
+        title="Rolling Shutter Cost Estimator & Material Weight Calculator"
+        description="Free online rolling shutter weight calculator & cost estimator by SATAH Iron Industry. Calculate exact patti strips, pipe, guide, bottom channel, spring, and bracket weights with instant PDF estimate download."
+        keywords="rolling shutter calculator, shutter cost estimator, shutter weight calculation, patti strips weight, rolling shutter material estimator, shutter invoice generator, SATAH Iron Industry"
+        canonical="/calculator"
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Rolling Shutter Cost Estimator & Weight Calculator",
+            "url": "https://sironindustry.com/calculator",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "All",
+            "description": "Calculate exact rolling shutter weight, strips, guide, bottom channel, springs, brackets, and generate instant PDF estimates by SATAH Iron Industry.",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "SATAH Iron Industry",
+              "url": "https://sironindustry.com"
+            }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sironindustry.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Cost Estimator", "item": "https://sironindustry.com/calculator" }
+            ]
+          }
+        ]}
+      />
       <Navbar />
       
       <main className="pt-20 pb-40 lg:pt-24 lg:pb-16">

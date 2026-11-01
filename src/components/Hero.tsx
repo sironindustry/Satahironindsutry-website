@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, Zap, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import QuoteDialog from "@/components/QuoteDialog";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -50,8 +51,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg sm:text-xl text-primary-foreground/70 max-w-2xl mb-8"
           >
-            Premium rolling shutters, gates, and custom iron fabrication. Built for 
-            durability, engineered for performance, designed for your business.
+            Specializing in high-quality shutter materials: shutter strips, guides, bottoms, springs, locks, gear boxes, iron pipes, and custom fabrication. Built to last.
           </motion.p>
 
           <motion.div
@@ -61,11 +61,14 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 mb-12"
           >
             <Button
+              asChild
               size="lg"
               className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-accent text-base px-8 py-6 group"
             >
-              Explore Products
-              <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+              <Link to="/shop">
+                Explore Products
+                <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </Link>
             </Button>
             <QuoteDialog
               trigger={
