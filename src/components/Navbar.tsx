@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ShoppingCart, Calculator, Phone, Home, Store, Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
-import logoAsset from "@/assets/satah-logo.png.asset.json";
+import logoAsset from "@/assets/logo.png";
  import CartDrawer from "@/components/CartDrawer";
  import { useCart } from "@/hooks/useCart";
  import QuoteDialog from "@/components/QuoteDialog";
@@ -40,9 +40,9 @@ const Navbar = () => {
               className="flex items-center gap-3"
             >
               <img
-                src={logoAsset.url}
+                src={logoAsset}
                 alt="SATAH Iron Industry logo"
-                className="w-10 h-10 rounded-lg object-contain bg-white"
+                className="h-10 w-auto rounded-lg object-contain bg-white p-0.5"
               />
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-foreground tracking-tight">SATAH</span>
