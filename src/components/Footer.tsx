@@ -20,7 +20,7 @@ const Footer = () => {
               <img
                 src={logoAsset}
                 alt="SATAH Iron Industry logo"
-                className="h-10 w-auto rounded-lg object-contain bg-white p-0.5"
+                className="h-11 w-auto object-contain"
               />
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-primary-foreground tracking-tight">SATAH</span>
